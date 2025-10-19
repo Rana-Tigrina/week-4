@@ -4,9 +4,12 @@ on:
     branches:
       - main
       - dev
+      - master
   pull_request:
     branches:
       - main
+      - dev
+      - master
 
 jobs:
   run-tests:
