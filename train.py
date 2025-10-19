@@ -22,3 +22,4 @@ with open('metrics.json', 'w') as f:
 
 joblib.dump(model, 'model.pkl')
 print(f"Model trained with accuracy: {accuracy:.4f}")
+print("changes made")
