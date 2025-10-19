@@ -51,7 +51,7 @@ jobs:
           export GOOGLE_APPLICATION_CREDENTIALS=$(pwd)/key.json
           gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS
           gcloud auth list
-          gsutil ls gs://week2_dvc_iris_bucket
+          gsutil ls gs://week_2_dvc_iris_bucket
 
       - name: Pull DVC data
         run: |
