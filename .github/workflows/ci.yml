@@ -4,9 +4,12 @@ on:
     branches:
       - main
       - dev
+      - master
   pull_request:
     branches:
       - main
+      - master
+      - dev
 
 jobs:
   run-tests:
@@ -55,12 +58,12 @@ jobs:
 
       - name: Pull DVC data
         run: |
-          echo "🚀 Pulling data from DVC remote..."
+          echo "Pulling data from DVC remote..."
           dvc pull
 
       - name: Run tests and generate report
         run: |
-          echo "🧪 Running tests..."
+          echo "Running tests..."
           pytest --md report.md
 
       - name: Create CML report
