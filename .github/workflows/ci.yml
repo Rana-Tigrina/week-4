@@ -1,4 +1,8 @@
 name: Model CI
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
 on:
   push:
     branches:
@@ -8,8 +12,8 @@ on:
   pull_request:
     branches:
       - main
-      - master
       - dev
+      - master
 
 jobs:
   run-tests:
