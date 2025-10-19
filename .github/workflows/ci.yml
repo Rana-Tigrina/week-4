@@ -1,4 +1,8 @@
 name: Model CI
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
 on:
   push:
     branches:
@@ -58,12 +62,12 @@ jobs:
 
       - name: Pull DVC data
         run: |
-          echo "🚀 Pulling data from DVC remote..."
+          echo "Pulling data from DVC remote..."
           dvc pull
 
       - name: Run tests and generate report
         run: |
-          echo "🧪 Running tests..."
+          echo "Running tests..."
           pytest --md report.md
 
       - name: Create CML report
